@@ -4,13 +4,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadComponent: () => import('./home/home.page').then( m => m.HomePage)
   },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tab-bar',
+    loadChildren: () => import('./components/tab-bar/tab-bar.module').then( m => m.TabBarPageModule)
+  }
 ];
 
 @NgModule({

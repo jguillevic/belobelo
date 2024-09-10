@@ -1,5 +1,7 @@
 {
   "name": "belobelo",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
